@@ -32,25 +32,29 @@ const projectPackages = {
 // List of default shadcn components to install
 const defaultComponents = [
   'button',
-  'dialog',
-  'input',
-  'label',
-  'select',
-  'toast',
-  'use-toast',
-  'toaster'
 ];
 
-async function initializeShadcn(spinner) {
+function ensureProjectDirectory(projectPath) {
+  const currentDir = process.cwd();
+  if (currentDir !== projectPath) {
+    process.chdir(projectPath);
+    console.log(chalk.gray(`Changed directory to: ${projectPath}`));
+  }
+}
+
+async function initializeShadcn(spinner, projectPath) {
   try {
+    // Ensure we're in the project directory
+    ensureProjectDirectory(projectPath);
+
     // Initialize shadcn
     spinner.text = 'Initializing shadcn/ui...';
-    execSync('npx shadcn@latest init -D --yes', { stdio: 'inherit' });
+    execSync('npx shadcn@latest init', { stdio: 'inherit' });
 
     // Install default components
     spinner.text = 'Installing shadcn components...';
     for (const component of defaultComponents) {
-      execSync(`npx shadcn@latest add ${component} --yes`, { stdio: 'inherit' });
+      execSync(`npx shadcn@latest add ${component}`, { stdio: 'inherit' });
     }
   } catch (error) {
     spinner.fail('Failed to initialize shadcn/ui');
@@ -113,11 +117,8 @@ async function createProject() {
         stdio: 'inherit'
       });
 
-      // Change to project directory
-      process.chdir(projectPath);
-
       // Initialize shadcn/ui
-      await initializeShadcn(spinner);
+      await initializeShadcn(spinner, projectPath);
 
       // Install additional packages
       if (selectedPackages.length > 0) {

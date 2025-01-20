@@ -1,6 +1,6 @@
 {
   "name": "create-antlers-app",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Create modern Next.js applications with Antlers CLI - includes shadcn/ui and other best practices",
   "main": "index.js",
   "type": "module",
@@ -34,7 +34,7 @@
     "url": "https://github.com/eXeis-ixt/antlers-next-cli"
   },
   "bugs": {
-    "url": "https://github.com/eXeis-ixt/antlers-next-cliissues"
+    "url": "https://github.com/eXeis-ixt/antlers-next-cli/issues"
   },
   "homepage": "https://github.com/eXeis-ixt/antlers-next-cli#readme",
   "engines": {
