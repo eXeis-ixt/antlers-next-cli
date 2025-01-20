@@ -31,12 +31,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/eXeis-ixt/antlers-cli"
+    "url": "https://github.com/eXeis-ixt/antlers-next-cli"
   },
   "bugs": {
-    "url": "https://github.com/eXeis-ixt/antlers-cli/issues"
+    "url": "https://github.com/eXeis-ixt/antlers-next-cliissues"
   },
-  "homepage": "https://github.com/eXeis-ixt/antlers-cli#readme",
+  "homepage": "https://github.com/eXeis-ixt/antlers-next-cli#readme",
   "engines": {
     "node": ">=18.0.0"
   },
