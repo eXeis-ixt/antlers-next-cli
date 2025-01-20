@@ -2,7 +2,7 @@
 
 A CLI tool to create modern Next.js applications with best practices and popular libraries pre-configured.
 
-![Antlers CLI](https://raw.githubusercontent.com/eXeis-ixt/antlers-cli/main/banner.png)
+![Antlers CLI](https://raw.githubusercontent.com/eXeis-ixt/antlers-cli-next/main/banner.png)
 
 ## Features
 
